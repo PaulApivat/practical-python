@@ -53,8 +53,14 @@ def portfolio_cost(filename):
             # This catches errors in int() and float() conversions above
             except ValueError:
                 print('Bad row:', row)
-                
+
     return total_cost
+
+import sys
+if len(sys.argv) == 2:
+    filename = sys.argv[1]
+else:
+    filename = input('Enter a filename: ')
 
 cost = portfolio_cost('Data/portfolio.csv')
 print('Total cost:', cost)
