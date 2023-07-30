@@ -58,6 +58,8 @@ def portfolio_report(portfoliofile, pricefile, fmt='txt'):
 
     # Print it out
     formatter = tableformat.create_formatter(fmt)
+    #formatter = tableformat.CSVTableFormatter()
+    #formatter = tableformat.HTMLTableFormatter()
     print_report(report, formatter)
 
 def main(args):
