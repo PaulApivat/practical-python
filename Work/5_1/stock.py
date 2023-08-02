@@ -61,3 +61,22 @@ print(Loud.__bases__)
 
 
 # Exercises 5.1 - 5.5
+from stock import Stock 
+
+goog = Stock('GOOG',100,490.10)
+ibm  = Stock('IBM',50, 91.23)
+
+print(goog.__dict__)
+print(ibm.__dict__)
+
+goog.date = '6/11/2007'
+print(goog.__dict__)
+
+goog.__dict__['time'] = '9:45am'
+print(goog.time)
+
+print(goog.cost())
+print(ibm.cost())
+
+print(Stock.__dict__['cost'](goog))
+print(Stock.__dict__['cost'](ibm))
